@@ -28,9 +28,9 @@
   --fw-bold: 800;
 
   /* line-height */
-  --lh-66: 66px;
-  --lh-21: 21px;
-  --lh-24: 24px;
+  --lh-66: 4.125rem;
+  --lh-21: 1.313rem;
+  --lh-24: 1.5rem;
 
   /* spacing */
   --s-8: 0.5rem;
@@ -163,7 +163,7 @@ header h1 {
 
 @media screen and (min-width: 90rem) {
   html {
-    font-size: 24px;
+    font-size: 20px;
   }
   body {
     background:
