@@ -1,5 +1,6 @@
 const allAnswerEl = document.querySelectorAll(".question-answer");
-const allShowEl = document.querySelectorAll(".show-icon");
+// const allShowEl = document.querySelectorAll(".show-icon");
+const questionEl = document.querySelectorAll(".question-container");
 
 function removeActive() {
   allAnswerEl.forEach((answer) => {
@@ -12,9 +13,10 @@ function removeActive() {
   });
 }
 
-allShowEl.forEach((icon) => {
-  icon.addEventListener("click", function () {
+questionEl.forEach((question) => {
+  question.addEventListener("click", function () {
     const faqItem = this.closest(".faq-item");
+    const icon = question.querySelector(".show-icon");
     const answer = faqItem.querySelector(".question-answer");
 
     if (answer.classList.contains("active")) {
@@ -27,3 +29,5 @@ allShowEl.forEach((icon) => {
     }
   });
 });
+
+// 115.5
