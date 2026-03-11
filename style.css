@@ -115,13 +115,19 @@ header h1 {
   line-height: 150%;
   color: var(--c-purple-60);
   margin-top: var(--s-24);
-  display: none;
-  transition: all 0.3s ease-in;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease-in-out,
+    opacity 0.4s ease-in-out;
 }
 
 /* active state of the question */
 .active {
-  display: block;
+  max-height: 12rem;
+  opacity: 1;
 }
 
 @media screen and (min-width: 48rem) {
@@ -170,5 +176,11 @@ header h1 {
       url(images/background-pattern-desktop.svg) no-repeat top -11% left 0% /
         contain,
       var(--c-purple-10);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .question-answer {
+    transition: none;
   }
 }
